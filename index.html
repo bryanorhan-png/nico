@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Trouver une copine pour Nicolas Torond ❤️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f0;
+            text-align: center;
+            padding: 50px;
+            color: #d6336c;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #ff4d94;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: pulse 1s infinite;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .heart {
+            color: red;
+            font-size: 2em;
+            animation: float 3s infinite;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(-20px); opacity: 0.7; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        button {
+            background-color: #ff4d94;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Image de Nicolas -->
+    <img src="https://github.com/bryanorhan-png/nico/blob/f116e444b462163d4b37d586c05e70cfbb1e85ab/unnamnedfqdsed.jpg" alt="Nicolas Torond">
+
+    <h1>❤️ Trouver une copine pour Nicolas Torond ❤️</h1>
+    <p>Si tu veux envoyer de l'amour à Nicolas, clique ici !</p>
+    <button onclick="alert('💕 Nicolas est super heureux ! 💕')">Envoyer l'amour</button>
+
+    <div id="hearts-container"></div>
+
+    <script>
+        // Génération aléatoire de cœurs
+        const container = document.getElementById('hearts-container');
+        for(let i=0; i<50; i++) {
+            const heart = document.createElement('span');
+            heart.classList.add('heart');
+            heart.textContent = '❤️';
+            heart.style.left = Math.random() * 90 + '%';
+            heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
+            container.appendChild(heart);
+        }
+    </script>
+</body>
+</html>
